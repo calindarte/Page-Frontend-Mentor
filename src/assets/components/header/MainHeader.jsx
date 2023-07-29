@@ -2,8 +2,9 @@ import logoSneaker from "@/assets/images/logo.svg";
 import avatar from "@/assets/images/image-avatar.png";
 import MenuIcon from "@/assets/components/icons/MenuIcon";
 import CartIcon from "@/assets/components/icons/CartIcon";
-import CloseIcon from "../icons/CloseIcon";
+import CloseIcon from "@/assets/components/icons/CloseIcon";
 import { useState } from "react";
+import NavLink from "@/assets/components/header/NavLink";
 
 const MainHeader = () => {
 
@@ -23,7 +24,7 @@ const MainHeader = () => {
  
   return (
     <>
-      <header className=" container flex mx-auto px-4 items-center gap-8 py-8 bg-gray-200">
+      <header className=" container flex mx-auto p-4 items-center gap-8 md:p-0">
         <button className="  md:hidden" onClick={handleOpenButton}>
           <MenuIcon />
         </button>
@@ -32,11 +33,11 @@ const MainHeader = () => {
         className={navClass}>
           <button className="mb-10 md:hidden" onClick={handleCloseButton}>
             <CloseIcon/></button>
-          <a href="#">Collections</a>
-          <a href="#">Men</a>
-          <a href="#">Women</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+            <NavLink text='Collections'/>
+            <NavLink text='Men'/>
+            <NavLink text='Women'/>
+            <NavLink text='About'/>
+            <NavLink text='Contact'/>
         </nav>
         <div className="flex gap-4">
           <button>
@@ -45,6 +46,7 @@ const MainHeader = () => {
           <img src={avatar} alt="avatar" className="w-10" />
         </div>
       </header>
+      <span className="container hidden mx-auto md:block w-full h-px bg-gray-300"></span>
     </>
   );
 };
