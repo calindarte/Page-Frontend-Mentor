@@ -1,6 +1,8 @@
 
 import PrevIcon from '@/assets/components/icons/PrevIcon'
 import NextIcon from '@/assets/components/icons/NextIcon'
+import CloseIcon from '@/assets/components/icons/CloseIcon'
+
 import { useRef, useState } from 'react'
 
 
@@ -23,7 +25,7 @@ const SlideProduct = ({ARRAY_IMGS=[],ARRAY_SMALL_IMGS=[], isOpenModal=false,hand
     <>
       <section  {...props}>
         {
-          isOpenModal &&  <button onClick={handleCloseModal} className='col-span-4 text-right'>Cerrar</button>
+          isOpenModal &&  <button onClick={handleCloseModal} className='col-span-4 ml-auto'><CloseIcon/> </button>
 
         }
         <div className='col-span-4 relative'>

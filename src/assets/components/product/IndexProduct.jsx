@@ -29,12 +29,15 @@ const objectProducts = {
 const IndexProduct = () => {
   return (
     <>
-      <main className="grid grid-cols-1 items-center gap-8 md:container md:mx-auto md:min-h-[calc(100vh-88px-3px)] md:grid-cols-2 lg:gap-x-16 lg:px-8 ">
+      <main className=" grid grid-cols-1 items-center gap-8 md:container md:mx-auto md:min-h-[calc(100vh-88px-3px)] md:grid-cols-2 lg:gap-x-16 lg:px-8 ">
           <GalleryProduct 
           ARRAY_IMGS={objectProducts.imagesMain} 
           ARRAY_SMALL_IMGS={objectProducts.imageSmall}/>
           <DetailsProduct objectProducts={objectProducts}/>
         </main>
+        <footer>
+            <p className="text-center text-sm  my-4 mx-6">Challenge by Frontend Mentor. Coded by Carlos Lindarte</p>
+        </footer>
     </>
   )
 }
